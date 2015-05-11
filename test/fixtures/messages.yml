@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  direction: MyString
+  message: MyText
+  source_ip: MyString
+  destination_ip: MyString
+  source_mac: MyString
+  destination_mac: MyString
+  remarks: MyText
+
+two:
+  direction: MyString
+  message: MyText
+  source_ip: MyString
+  destination_ip: MyString
+  source_mac: MyString
+  destination_mac: MyString
+  remarks: MyText

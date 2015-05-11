@@ -1,0 +1,34 @@
+
+<div>
+  <table>
+  	<tr>
+  		<span>Message Queue</span>
+  	</tr>
+  	<tr>
+  		<th>direction</th>
+  		<th>message</th>
+  		<th>source IP</th>
+  		<th>created at</th>
+  		<th>updated at</th>
+  	</tr>
+  	<% @messages.each do |message| %>  	
+  	<tr>
+  	  <td style="border: solid 1px; border-radius: 5px">
+  	  	<%= message.direction %>
+  	  </td>
+  	  <td style="border: solid 1px; border-radius: 5px; background-color:#faa460">
+  	  	<%= message.message %>
+  	  </td>
+  	  <td style="border: solid 1px; border-radius: 5px">
+  	  	<%= message.source_ip %>
+  	  </td>
+  	  <td style="border: solid 1px; border-radius: 5px">
+  	  	<%= message.created_at %>
+  	  </td>
+  	  <td style="border: solid 1px; border-radius: 5px">
+  	  	<%= message.updated_at %>
+  	  </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  description: 
+  background_task: 
+  start_datetime: 
+  ip_startedfrom: 
+  mac_startedfrom: 
+  username_startedby: 
+  completed_datetime: 
+  completion_confirmation: 
+
+two:
+  name: 
+  description: 
+  background_task: 
+  start_datetime: 
+  ip_startedfrom: 
+  mac_startedfrom: 
+  username_startedby: 
+  completed_datetime: 
+  completion_confirmation: 

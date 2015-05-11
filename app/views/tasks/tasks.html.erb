@@ -1,0 +1,65 @@
+
+<div id='task_container'>
+  <table>
+  <tr style='border:solid 1px;border-radius:5px'>
+  <th>Task name</th><th>Description</th><th>start date/time</th><th>from IP</th><th>from MAC</th> 
+  </tr>
+  <% @tasks.each do |task| %>
+  <tr>
+  <td style='border:solid 1px;border-radius:5px;background-color:yellow'>
+    <div class='task_name' style='float:left;width:100%;height:10% ;padding:5px'>
+	  <%= task.name.slice(30,task.name.length) %></div>
+  </td><td style='border:solid 1px; border-radius:5px'>
+    <div class='task_description' style='float:left;width:100%;height:10% ;padding:5px ;border-radius: 5px'>
+      <%= "#{task.description}" %></div>
+  </td><td style='border:solid 1px;border-radius:5px'>
+      <div class='datetime' style='float:left;width:100%;height:10% ;padding:5px border-radius: 5px'>
+      <%= "#{task.start_datetime}" %></div>
+  </td><td style='border:solid 1px';border-radius:5px'>
+    <div class='ip_address' style='float:left;width:100%;height:10% ;padding:5px ;border-radius: 5px'>
+      <%= "#{task.ip_startedfrom}" %></div>
+  </td><td style='border:solid 1px;border-radius:5px'>
+    <div class='mac_address' style='float:left;width:100%;height:10% ;padding:5px ;border-radius: 5px'>
+      <%= "#{task.mac_startedfrom}" %></div>
+  </td>
+  </tr>
+  <% end %>
+  </table>
+</div>
+
+<div>
+  HTTParty request response : <%= "#{@response}" %> 
+</div>
+
+<script type="text/javascript">
+      function doCommand(event) {
+        var command = event.target.value;
+        if (command.action == "call_contact") {
+          var number = getContactNumber(command.contact);
+          callNumber(number);
+        } else if (command.action == "call_number") {
+          callNumber(command.number);
+        } else if (command.action == "calculate") {
+          say(evaluate(command.expression));
+        } else if {command.action == "search") {
+          search(command.query);
+        }
+      }
+      function callNumber(number) {
+        window.location = "tel:" + number;
+      }
+      function search(query) {
+        // Start web search for query.
+      }
+      function getContactNumber(contact) {
+        // Get the phone number of the contact.
+      }
+      function say(text) {
+        // Speak text.
+      }
+    </script>
+
+    <form>
+    <input speech grammar="commands.grxml" onspeechchange="doCommand">
+    <input type="text" x-webkit-speech >
+    </form>
