@@ -1,3 +1,28 @@
+<div>
+    <table>
+      <tr><td></td><td>
+        <%= form_tag(method: :create, remote: true) do %>
+          <%= hidden_field_tag 'message', 'up' %>
+          <%= submit_tag( value='Up') %>
+        <% end %>
+      </td><td></td></tr>
+      <tr><td>
+        <%= form_tag(method: :create, remote: true) do %>
+          <%= hidden_field_tag 'message', 'left' %>
+          <%= submit_tag( value='Left') %>
+        <% end %>
+      </td><td></td><td>
+        <%= form_tag(method: :create, remote: true) do %>
+          <%= hidden_field_tag 'message', 'right' %>
+          <%= submit_tag( value='Right') %>
+        <% end %>
+      </td></tr>
+      <tr><td></td><td><%= form_tag(method: :create, remote: true) do %>
+          <%= hidden_field_tag 'message', 'down' %>
+          <%= submit_tag( value='Down') %>
+        <% end %></td><td></td></tr>
+    </table>
+</div>
 
 <div>
   <table>
